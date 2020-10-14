@@ -1,0 +1,36 @@
+.header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    z-index: 10;
+ }
+
+ .header .header_box {
+    width: 980px;
+ }
+
+ .header .header_box .logo_area{
+      background: url('../images/header/logo.png') no-repeat 0 -3px;
+      background-size: 70%;
+      width: 250px;
+      height: 100%;
+      float: left;
+ }
+ .header .header_box .nav_area{
+      float: right;
+      width: 690px;
+ }
+
+ .header .header_box .nav_area ul{
+    list-style: none;
+ }
+
+ .header .header_box ul li{
+      width: 20%;
+      text-align: center;
+      font-family: 'NotoB';
+      font-size: 18px;
+      float: left;
+}  
