@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/sujisilver_web_2020/static/css/main.fe1359a8.chunk.css",
+    "main.js": "/sujisilver_web_2020/static/js/main.e4e9a0a6.chunk.js",
+    "main.js.map": "/sujisilver_web_2020/static/js/main.e4e9a0a6.chunk.js.map",
+    "runtime-main.js": "/sujisilver_web_2020/static/js/runtime-main.b688a401.js",
+    "runtime-main.js.map": "/sujisilver_web_2020/static/js/runtime-main.b688a401.js.map",
+    "static/js/2.19dddeb4.chunk.js": "/sujisilver_web_2020/static/js/2.19dddeb4.chunk.js",
+    "static/js/2.19dddeb4.chunk.js.map": "/sujisilver_web_2020/static/js/2.19dddeb4.chunk.js.map",
+    "index.html": "/sujisilver_web_2020/index.html",
+    "precache-manifest.584c0970638c256fc26899ee6240dbe9.js": "/sujisilver_web_2020/precache-manifest.584c0970638c256fc26899ee6240dbe9.js",
+    "service-worker.js": "/sujisilver_web_2020/service-worker.js",
+    "static/css/main.fe1359a8.chunk.css.map": "/sujisilver_web_2020/static/css/main.fe1359a8.chunk.css.map",
+    "static/js/2.19dddeb4.chunk.js.LICENSE.txt": "/sujisilver_web_2020/static/js/2.19dddeb4.chunk.js.LICENSE.txt",
+    "static/media/Common.css": "/sujisilver_web_2020/static/media/TmoneyRoundWindRegular.b2d678f3.woff2",
+    "static/media/Main.css": "/sujisilver_web_2020/static/media/main_img.97356323.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b688a401.js",
+    "static/js/2.19dddeb4.chunk.js",
+    "static/css/main.fe1359a8.chunk.css",
+    "static/js/main.e4e9a0a6.chunk.js"
+  ]
+}
