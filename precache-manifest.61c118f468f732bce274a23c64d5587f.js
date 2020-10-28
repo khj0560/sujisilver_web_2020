@@ -1,23 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "676f170a17323418ad244ad67dbb26cd",
+    "revision": "76f1ceb927aa547cb67f100566f39ea1",
     "url": "/sujisilver_web_2020/index.html"
   },
   {
-    "revision": "dea5c316abbe63263c62",
-    "url": "/sujisilver_web_2020/static/css/main.fe1359a8.chunk.css"
+    "revision": "280aaf17063feec16dbe",
+    "url": "/sujisilver_web_2020/static/js/2.163825a2.chunk.js"
   },
   {
-    "revision": "4be5ad135c301f3353a1",
-    "url": "/sujisilver_web_2020/static/js/2.19dddeb4.chunk.js"
+    "revision": "1a157444f2ff702a262c6d4e47b33354",
+    "url": "/sujisilver_web_2020/static/js/2.163825a2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1fe74c45bd61c8f97b671c803349a7ba",
-    "url": "/sujisilver_web_2020/static/js/2.19dddeb4.chunk.js.LICENSE.txt"
-  },
-  {
-    "revision": "dea5c316abbe63263c62",
-    "url": "/sujisilver_web_2020/static/js/main.e4e9a0a6.chunk.js"
+    "revision": "4bb7b7b1172bf96fd073",
+    "url": "/sujisilver_web_2020/static/js/main.1facd28f.chunk.js"
   },
   {
     "revision": "0b9c11ff8ebd79f4f2cc",

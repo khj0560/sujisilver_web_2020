@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/sujisilver_web_2020/precache-manifest.584c0970638c256fc26899ee6240dbe9.js"
+  "/sujisilver_web_2020/precache-manifest.61c118f468f732bce274a23c64d5587f.js"
 );
 
 self.addEventListener('message', (event) => {
