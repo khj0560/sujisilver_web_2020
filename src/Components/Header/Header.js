@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
 /* import { Link } from "react-router-dom"; */
-import { flexBox, flexColumn, clear } from "../Styles/SharedStyles";
-import logo from "../images/header/logo.png"
+import { flexBox, flexColumn, clear } from "../../Styles/SharedStyles"
+import logo from "../../images/header/logo.png"
 
 const HeaderWrapper = styled.header`
     ${flexBox}
@@ -18,11 +18,6 @@ const HeaderWrapper = styled.header`
     
     @media (max-width: 1200px) {
         min-width: 250px;
-        /* nested rules work as expected 
-        &:hover {
-        background: yellow;
-        }
-        */
     }
  `
 
@@ -69,11 +64,11 @@ const List = styled.ul`
       font-family: 'NotoB';
       font-size: 18px;
       float: left;
-`  
+`
 
 function Header() {
     return(
-         <HeaderWrapper>
+        <HeaderWrapper>
             <HeaderBox>
                 <LogoArea ></LogoArea>
                 <NavArea>

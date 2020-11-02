@@ -1,13 +1,12 @@
 import React from 'react';
-//import ReactDOM from "react-dom";
 import ReactFullpage from "@fullpage/react-fullpage";
 import "fullpage.js/vendors/scrolloverflow";
 
-import Main001 from "./Main/Main001"
-import Main002 from "./Main/Main002"
-import Main003 from "./Main/Main003"
-import Main004 from "./Main/Main004"
-import Main005 from "./Main/Main005"
+import Main001 from "./Main001"
+import Main002 from "./Main002"
+import Main003 from "./Main003"
+import Main004 from "./Main004"
+import Main005 from "./Main005"
 
 const Main = () => (
     <ReactFullpage
@@ -16,6 +15,7 @@ const Main = () => (
       scrollingSpeed = {1000} 
       scrollOverflow = {true}
       paddingTop = "70px"
+      touchSensitivity = "10"
 
       render={({ state, fullpageApi }) => {
         return (

@@ -19,11 +19,11 @@ const MainBox = styled.div`
         padding: 0 30px;
 
         @media(max-width: 600px) {
-            padding: 0 20px;
+            padding: 50px 20px;
         }
 
         @media(max-width: 300px) {
-            padding: 0 15px;
+            padding: 50px 15px;
         }
     }
 `
@@ -63,6 +63,12 @@ const Item = styled.div`
 `
 const Main004Icon = styled(Icon)`
     margin: 0 auto;
+
+    @media(max-width: 900px) {
+        width: 170px;
+        height: 170px;
+        
+    }
 `
 const Main004Text = styled(Text)`
     text-align: center;

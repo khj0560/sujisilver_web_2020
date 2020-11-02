@@ -1,9 +1,12 @@
 import React from 'react';
-import Main from "./Main";
-import Header from "./Header";
+import Main from "./Main/Main";
+import MobileMain from "./Main/MobileMain";
+import Header from "./Header/Header";
+import MobileHeader from "./Header/MobileHeader";
 import styled, { ThemeProvider } from 'styled-components';
 import GlobalStyles from "../Styles/GlobalStyles";
 import Theme from "../Styles/Theme";
+import {BrowserView, MobileView} from "react-device-detect";
 
 const Contents = styled.div`
   min-width: 1200px;
@@ -18,9 +21,19 @@ export default() => {
     <ThemeProvider theme={Theme}>
       <>
         <GlobalStyles />
-          <Header />
+          <BrowserView>
+            <Header />
+          </BrowserView>
+          <MobileView>
+            <MobileHeader />
+          </MobileView>
           <Contents>
-            <Main />
+            <BrowserView>
+              <Main />
+            </BrowserView>
+            <MobileView>
+              <MobileMain />
+            </MobileView>
           </Contents>
       </>
     </ThemeProvider>

@@ -101,33 +101,33 @@ export default createGlobalStyle`
             font-size: 40px;
             line-height: 48px;
             @media(max-width: 900px) {
-                font-size: 36px;
+                font-size: 30px;
             }
         }
         h2 {
             font-size: 36px;
             line-height: 48px;
             @media(max-width: 900px) {
-                font-size: 30px;
+                font-size: 28px;
             }
         }
         h3 {
             font-size: 30px;
             @media(max-width: 900px) {
-                font-size: 24px;
+                font-size: 22px;
             }
         }
         h4 {
             font-size: 22px;
             line-height: 38px;
             @media(max-width: 900px) {
-                font-size: 18px;
+                font-size: 20px;
             }
         }
         h5 {
             font-size: 20px;
             @media(max-width: 900px) {
-                font-size: 18px;
+                font-size: 20px;
             }
         }
         p {

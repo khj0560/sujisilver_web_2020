@@ -22,7 +22,7 @@ const ButtonWrapper = styled.div`
 
         @media(max-width: 900px) {
             width: 100%;
-            padding: 20px 30px;
+            padding: 17px 30px;
             border: 0;
             color: ${props => props.theme.whiteColor};
             background-color: ${props => props.theme.pointColor};

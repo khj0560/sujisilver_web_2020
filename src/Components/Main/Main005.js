@@ -16,11 +16,11 @@ const MainBox = styled.div`
         padding: 0 30px;
 
         @media(max-width: 600px) {
-            padding: 0 20px;
+            padding: 50px 20px;
         }
 
         @media(max-width: 300px) {
-            padding: 0 15px;
+            padding: 50px 15px;
         }
     }
 `
