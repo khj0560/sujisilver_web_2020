@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
-import mbLogo from "../../images/header/mobileLogo.png"
-import mbFoldIcon from "../../images/header/mobileFoldIcon.png"
-import arrowLeft from "../../images/header/arrowL.png"
-import arrowRight from "../../images/header/arrowR.png"
+import mbLogo from "../../images/header/mobileLogo.png";
+import mbFoldIcon from "../../images/header/mobileFoldIcon.png";
+import arrowLeft from "../../images/header/arrowL.png";
+import arrowRight from "../../images/header/arrowR.png";
+import {Link} from "react-router-dom";
 
 const MBHeader = styled.div`
     position: fixed;
@@ -23,6 +24,7 @@ const MBLogoArea = styled.div`
     position: relative;
     width: 130px;
     background: url(${mbLogo}) no-repeat 0 3px;
+    background-position: center;
     background-size: 85%;
     max-width: 250px;
     height: 100%;
@@ -31,12 +33,17 @@ const MBLogoArea = styled.div`
 `
 const FoldIcon = styled.div`
     position: absolute;
-    width: 35px;
-    height: 35px;
+    display: block;
+    width: 28px;
+    height: 100%;
     background: url(${mbFoldIcon}) no-repeat center;
     background-size: 80%;
-    top: 20px;
+    top: 8px;
     right: 20px;
+
+    @media (min-width: 650px) {
+        display: none;
+    }   
 `
 const SubArea = styled.div`
     position: relative;
@@ -103,16 +110,16 @@ function MobileHeader() {
     return(
         <MBHeader>
             <TopArea>
-                <MBLogoArea></MBLogoArea>
+                <Link to="/"><MBLogoArea></MBLogoArea></Link>
                 <FoldIcon></FoldIcon>
             </TopArea>    
             <SubArea>
                 <MBList>
-                    <MBItems>센터소개</MBItems>
-                    <MBItems>주야간보호 안내</MBItems>
-                    <MBItems>요양원 안내</MBItems>
-                    <MBItems>방문요양 안내</MBItems>
-                    <MBItems>상담신청</MBItems>
+                    <MBItems><Link to="/intro">센터소개</Link></MBItems>
+                    <MBItems><Link to="/daynightcare">주야간보호 안내</Link></MBItems>
+                    <MBItems><Link to="/nursinghome">요양원 안내</Link></MBItems>
+                    <MBItems><Link to="/visitcare">방문요양 안내</Link></MBItems>
+                    <MBItems><Link to="/counsel">상담신청</Link></MBItems>
                 </MBList>
                 <ArrowL />
                 <ArrowR />

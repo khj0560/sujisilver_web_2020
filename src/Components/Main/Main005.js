@@ -1,26 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
-import { imageBox,flexBox,flexColumn, flexSpaceBetween } from "../../Styles/SharedStyles";
 import Title from "../Title";
 import Text from "../Text";
-import Button from "../Button";
 import Icon from "../Icon";
 import Main005Image from "../../images/main/main005_icon.png"
 
 const MainBox = styled.div`
     background-color: ${(props) => props.color ? props.theme.bgColor : props.theme.whiteColor};
-    ${flexBox};
-    ${flexColumn};
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
 
     & {
-        padding: 0 30px;
+        padding: 50px 30px;
 
-        @media(max-width: 600px) {
+        @media(max-width: 768px) {
             padding: 50px 20px;
-        }
-
-        @media(max-width: 300px) {
-            padding: 50px 15px;
         }
     }
 `

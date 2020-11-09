@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { imageBox,flexBox,flexColumn, flexSpaceBetween } from "../../Styles/SharedStyles";
 import Title from "../Title";
 import Text from "../Text";
 import Button from "../Button";
@@ -10,35 +9,37 @@ import main003Icon02 from "../../images/main/main003_icon_02.png";
 
 const MainBox = styled.div`
     background-color: ${(props) => props.color ? props.theme.bgColor : props.theme.whiteColor};
-    ${flexBox};
-    ${flexColumn};
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     & {
-        padding: 0 30px;
+        padding: 50px 30px;
 
-        @media(max-width: 600px) {
+        @media(max-width: 768px) {
             padding: 50px 20px;
-        }
-
-        @media(max-width: 300px) {
-            padding: 50px 15px;
         }
     }
 `
 const FlexBox = styled.div`
-    ${flexBox};
+    display: flex;
+    justify-content: center;
+    width: 100%;
     width: ${props => props.width || "100%" };
     flex-direction: ${props => props.direction || "row"};
     justify-content: ${props => props.justify || "center"};
 `
 const ItemBox = styled.div`
-    ${flexBox};
-    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0;
 
     @media(max-width: 900px) {
         flex-direction: column;
         width: 600px;
-        margin: 20px auto;
+        margin: 10px auto;
     }
 
     @media(max-width: 600px) {
@@ -48,11 +49,13 @@ const ItemBox = styled.div`
 `
 
 const Main003Icon = styled(Icon)`
+    width: 180px;
+    height: 180px;
     @media(max-width: 900px) {
         margin: 0 auto;
     }
 
-    @media(max-width: 600px) {
+    @media(max-width: 768px) {
         width: 150px;
         height: 150px;
     }

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { imageBox,flexBox,flexColumn, flexSpaceBetween } from "../../Styles/SharedStyles";
 import Main001 from "./Main001Mobile"
 import Main002 from "./Main002"
 import Main003 from "./Main003"
@@ -9,8 +8,11 @@ import Main005 from "./Main005"
 
 const MainBox = styled.div`
     background-color: ${(props) => props.color ? props.theme.bgColor : props.theme.whiteColor};
-    ${flexBox};
-    ${flexColumn};
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
 
     & {
         padding: 0 30px;

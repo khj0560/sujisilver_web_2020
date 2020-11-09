@@ -20,7 +20,7 @@ const ButtonWrapper = styled.div`
         padding: 30px 50px;
         position: relative;
 
-        @media(max-width: 900px) {
+        @media(max-width: 768px) {
             width: 100%;
             padding: 17px 30px;
             border: 0;

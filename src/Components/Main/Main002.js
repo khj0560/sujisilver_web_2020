@@ -1,24 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
-import { imageBox,flexBox,flexColumn, flexSpaceBetween } from "../../Styles/SharedStyles";
 import Title from "../Title";
 import Button from "../Button";
 
 ///////// Main css /////////
 const MainBox = styled.div`
     background-color: ${(props) => props.color ? props.theme.bgColor : props.theme.whiteColor};
-    ${flexBox};
-    ${flexColumn};
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
 
     & {
-        padding: 0 30px;
+        padding: 50px 30px;
 
-        @media(max-width: 600px) {
+        @media(max-width: 768px) {
             padding: 50px 20px;
-        }
-
-        @media(max-width: 300px) {
-            padding: 50px 15px;
         }
     }
 `

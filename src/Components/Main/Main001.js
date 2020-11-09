@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { imageBox,flexBox,flexColumn, flexSpaceBetween } from "../../Styles/SharedStyles";
 import mainImg from "../../images/main/main_img.jpg";
 import arrow_bottom from "../../images/main/arrow_bottom.png";
 import main001Btn01 from "../../images/main/main001_btn_01.png";
@@ -9,13 +8,21 @@ import main001Btn03 from "../../images/main/main001_btn_03.png";
 
 const Main001Box = styled.div`
     background: url(${mainImg});
-    ${imageBox};
-    ${flexBox};
-    ${flexColumn};
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
 `
 const MainTitleArea = styled.div`
-    ${flexBox};
-    ${flexColumn};
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
     line-height: 50px;
     text-align: center;
     color: ${props => props.theme.whiteColor};
@@ -37,7 +44,9 @@ const MainTitleArea = styled.div`
     }
 `
 const MainBtnArea = styled.div`
-    ${flexBox};
+    display: flex;
+    justify-content: center;
+    width: 100%;
     width: 80%;
     max-width: 1800px;
     height: 50%;
@@ -116,7 +125,9 @@ const BtnImg = styled.div`
     text-align: center;
     border-radius: 10px 10px 0 0;
     background: url(${(props) => props.image});
-    ${imageBox};
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 `
 
 const MainBtnComp = ({title,image}) => (

@@ -1,41 +1,49 @@
 import React from 'react';
 import styled from 'styled-components';
-import { imageBox,flexBox,flexColumn, flexSpaceBetween } from "../../Styles/SharedStyles";
 import mainImg from "../../images/main/main_img.jpg";
 import main001Btn01 from "../../images/main/main001_btn_01.png";
 import main001Btn02 from "../../images/main/main001_btn_02.png";
 import main001Btn03 from "../../images/main/main001_btn_03.png";
 
 const MainBox = styled.div`
-    background-color: ${(props) => props.color ? props.theme.bgColor : props.theme.whiteColor};
-    ${flexBox};
-    ${flexColumn};
+    padding-bottom: 50px;
+    display: grid;
+    gap: 0px;
+    height: 80vh;
+    grid-template: 
+        "ImgContent" 5fr;
+`
+const MainImg = styled.div`
+    text-align: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    background-image: url(${props => props.image});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    grid-area: ImgContent;
+    text-shadow: 0 0 0 #333, 0 5px 20px rgba(0,0,0,0.3);
 
-    & {
-        padding: 0 30px;
-
-        @media(max-width: 600px) {
-            padding: 50px 20px;
-        }
-
-        @media(max-width: 300px) {
-            padding: 50px 15px;
-        }
+    & h2{
+        font-family: 'TB'
     }
 `
 const BtnArea = styled.div`
     position: relative;
     overflow: hidden;
     width: 100%;
+    margin-top: 30px;
     padding: 0;
     transition-duration:.1s;
+    text-align: center;
 ` 
 const BtnList = styled.ul`
     overflow-y:hidden;
     overflow-x:auto;
     position:relative;
     width:100%;
-    padding:0;
+    padding: 20px;
     text-align:center;
     vertical-align:top;
     white-space:nowrap;
@@ -57,7 +65,12 @@ const BtnItems = styled.li`
     min-width:58px;
     margin:0 8px;
     transition-duration:.3s;
-    background-color: orange;
+    border-radius: 10px;
+    background-image: url(${props => props.image});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 0 0 #333, 0 5px 20px rgba(0,0,0,0.2);
     width: 200px;
     height: 200px;
 
@@ -67,15 +80,29 @@ const BtnItems = styled.li`
     &:last-child {
         margin: 0 0 0 8px;
     }
+
+    & h5 {
+        padding-top: 10px;
+        font-family: 'TB';
+    }
 `
 
 const Main001Mobile = () => (
     <MainBox>
+        <MainImg image={mainImg}>
+            <div>
+                <h5>어르신에게 재활의 의지를</h5>
+                <h5>가족은 삶의 여유를</h5>
+                <h2>수지 실버 주야간보호센터</h2>
+                <h2>수지 실버 요양원</h2>
+            </div>
+        </MainImg>
         <BtnArea>
+            <h5>주요서비스 안내</h5>
             <BtnList>
-                <BtnItems></BtnItems>
-                <BtnItems></BtnItems>
-                <BtnItems></BtnItems>
+                <BtnItems image={main001Btn01}><h5>주야간보호센터</h5></BtnItems>
+                <BtnItems image={main001Btn02}><h5>요양원</h5></BtnItems>
+                <BtnItems image={main001Btn03}><h5>방문요양센터</h5></BtnItems>
             </BtnList>
         </BtnArea>
     </MainBox>

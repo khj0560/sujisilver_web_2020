@@ -1,11 +1,14 @@
 import React from 'react';
 import styled from "styled-components";
-/* import { Link } from "react-router-dom"; */
-import { flexBox, flexColumn, clear } from "../../Styles/SharedStyles"
 import logo from "../../images/header/logo.png"
+import {isMobile} from "react-device-detect";
+import MobileHeader from "./MobileHeader";
+import { Link } from "react-router-dom";
 
 const HeaderWrapper = styled.header`
-    ${flexBox}
+    display: flex;
+    justify-content: center;
+    width: 100%;
     min-width: 1200px;
     position: fixed;
     top: 0px;
@@ -16,7 +19,7 @@ const HeaderWrapper = styled.header`
     display: flex;
     justify-content: center;
     
-    @media (max-width: 1200px) {
+    @media (max-width: 1240px) {
         min-width: 250px;
     }
  `
@@ -24,9 +27,13 @@ const HeaderWrapper = styled.header`
 const HeaderBox = styled.div`
     width: 80%;
     max-width: 980px;
-    ${clear}
     @media (max-width: 1240px) {
         width: 100%; 
+    }
+    &:after {
+        content:'';
+        display:block;
+        clear:both;
     }
  `
 
@@ -37,21 +44,21 @@ const LogoArea = styled.div`
     max-width: 250px;
     height: 100%;
     float: left;
-    @media (max-width: 1000px) {
+    @media (max-width: 1240px) {
         width:195px;
         margin: 0 10px;
     }   
 `
 
 const NavArea = styled.div`
-      width: 80%;  
-      float: right;
-      max-width: 690px;
-      ${flexBox}
-      ${flexColumn}
-      @media (max-width: 900px) {
-        display: none;
-    }         
+    width: 80%;  
+    float: right;
+    max-width: 690px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
  `
 
 const List = styled.ul`
@@ -70,14 +77,14 @@ function Header() {
     return(
         <HeaderWrapper>
             <HeaderBox>
-                <LogoArea ></LogoArea>
+                <Link to="/"><LogoArea ></LogoArea></Link>
                 <NavArea>
                     <List>
-                        <ListItems>센터소개</ListItems>
-                        <ListItems>주야간보호 안내</ListItems>
-                        <ListItems>요양원 안내</ListItems>
-                        <ListItems>방문요양 안내</ListItems>
-                        <ListItems>상담신청</ListItems>
+                        <ListItems><Link to="/intro">센터소개</Link></ListItems>
+                        <ListItems><Link to="/daynightcare">주야간보호 안내</Link></ListItems>
+                        <ListItems><Link to="/nursinghome">요양원 안내</Link></ListItems>
+                        <ListItems><Link to="/visitcare">방문요양 안내</Link></ListItems>
+                        <ListItems><Link to="/counsel">상담신청</Link></ListItems>
                     </List>
                 </NavArea>
             </HeaderBox>
@@ -85,4 +92,13 @@ function Header() {
     )
 }
 
-export default Header;
+const renderContent = () => {
+    const width = window.innerWidth;
+    if(isMobile || width < 1024) {
+        return <MobileHeader />
+    }else {
+        return <Header />
+    }
+}
+
+export default renderContent;

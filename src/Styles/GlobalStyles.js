@@ -79,6 +79,9 @@ export default createGlobalStyle`
             box-sizing: border-box;
         }
 
+        a {color:#555;}
+        a:link, a:visited {text-decoration:none}        
+
         body {
             margin: 0;
             padding: 0;
