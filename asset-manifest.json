@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/sujisilver_web_2020/static/js/main.d1887e7c.chunk.js",
-    "main.js.map": "/sujisilver_web_2020/static/js/main.d1887e7c.chunk.js.map",
+    "main.js": "/sujisilver_web_2020/static/js/main.f1fd413e.chunk.js",
+    "main.js.map": "/sujisilver_web_2020/static/js/main.f1fd413e.chunk.js.map",
     "runtime-main.js": "/sujisilver_web_2020/static/js/runtime-main.b688a401.js",
     "runtime-main.js.map": "/sujisilver_web_2020/static/js/runtime-main.b688a401.js.map",
     "static/js/2.416163ec.chunk.js": "/sujisilver_web_2020/static/js/2.416163ec.chunk.js",
     "static/js/2.416163ec.chunk.js.map": "/sujisilver_web_2020/static/js/2.416163ec.chunk.js.map",
     "index.html": "/sujisilver_web_2020/index.html",
-    "precache-manifest.0eefc93267b790b15e21df58325b5b0d.js": "/sujisilver_web_2020/precache-manifest.0eefc93267b790b15e21df58325b5b0d.js",
+    "precache-manifest.b4f0531ef9ffc1691dc30aa427b45b7a.js": "/sujisilver_web_2020/precache-manifest.b4f0531ef9ffc1691dc30aa427b45b7a.js",
     "service-worker.js": "/sujisilver_web_2020/service-worker.js",
     "static/js/2.416163ec.chunk.js.LICENSE.txt": "/sujisilver_web_2020/static/js/2.416163ec.chunk.js.LICENSE.txt",
     "static/media/NotoSansKR-Bold.woff2": "/sujisilver_web_2020/static/media/NotoSansKR-Bold.2de688e2.woff2",
@@ -38,6 +38,6 @@
   "entrypoints": [
     "static/js/runtime-main.b688a401.js",
     "static/js/2.416163ec.chunk.js",
-    "static/js/main.d1887e7c.chunk.js"
+    "static/js/main.f1fd413e.chunk.js"
   ]
 }

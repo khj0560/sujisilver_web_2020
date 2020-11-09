@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8ac161108818f16fc9e1eb6741374f88",
+    "revision": "e25da05d3603a33ef53391685a9be2b0",
     "url": "/sujisilver_web_2020/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sujisilver_web_2020/static/js/2.416163ec.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ec2ca2e762114cb82659",
-    "url": "/sujisilver_web_2020/static/js/main.d1887e7c.chunk.js"
+    "revision": "6baaaaa87e9892a154ec",
+    "url": "/sujisilver_web_2020/static/js/main.f1fd413e.chunk.js"
   },
   {
     "revision": "0b9c11ff8ebd79f4f2cc",
