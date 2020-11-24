@@ -5,22 +5,6 @@ import Text from "../Text";
 import Icon from "../Icon";
 import Main005Image from "../../images/main/main005_icon.png"
 
-const MainBox = styled.div`
-    background-color: ${(props) => props.color ? props.theme.bgColor : props.theme.whiteColor};
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-
-    & {
-        padding: 50px 30px;
-
-        @media(max-width: 768px) {
-            padding: 50px 20px;
-        }
-    }
-`
 const Wrapper = styled.div`
     margin-top: 30px;
     display: flex;
@@ -38,7 +22,7 @@ const Main005Text = styled(Text)`
 
 const Main005 = () => {
     return(
-        <MainBox color="bg">
+        <>
             <Title
                 title1={{title:"센터 위치 ", color:"red"}}
                 title2={{title:"안내"}}
@@ -57,7 +41,7 @@ const Main005 = () => {
                     text = {["031 - 272 - 0047", "010 - 7941 - 8430"]}
                 />
             </Wrapper>
-        </MainBox>
+        </>
     )
 }
 

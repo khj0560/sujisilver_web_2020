@@ -6,23 +6,20 @@ import main001Btn02 from "../../images/main/main001_btn_02.png";
 import main001Btn03 from "../../images/main/main001_btn_03.png";
 
 const MainBox = styled.div`
-    padding-bottom: 50px;
-    display: grid;
-    gap: 0px;
-    height: 80vh;
-    grid-template: 
-        "ImgContent" 5fr;
+    /* padding-bottom: 50px; */
+    height: 100%;
 `
 const MainImg = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
     color: #fff;
-    display: flex;
-    justify-content: center;
+    height: 40vh;
     background-image: url(${props => props.image});
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    grid-area: ImgContent;
     text-shadow: 0 0 0 #333, 0 5px 20px rgba(0,0,0,0.3);
 
     & h2{

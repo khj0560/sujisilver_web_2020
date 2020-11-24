@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactFullpage from "@fullpage/react-fullpage";
 import "fullpage.js/vendors/scrolloverflow";
+import styled from "styled-components";
 import Main001 from "../Components/Main/Main001";
 import Main002 from "../Components/Main/Main002";
 import Main003 from "../Components/Main/Main003";
@@ -17,13 +18,29 @@ const renderContent = () => {
     return <Main001/>
   } 
 }
+const MainDiv = styled.div`
+  @media (max-width: 768px) {
+    height: 100% !important;
+  }
+`
+const Div = styled.div`
+  background-color: ${(props) => props.color ? props.theme.bgColor : props.theme.whiteColor};
+  margin: 0 auto;
+  @media (max-width: 768px) {
+    height: 100% !important;
+    padding-top: 50px !important;
+    padding: 50px 30px;
+    
+    & > div{
+      height: 100% !important;;
+    }
+  }
+`
 
 const Main = () => {
   let paddingValue = "70px"
   if (window.innerWidth < 1024) {
     paddingValue = "113px"
-  } else if (isMobile || window.innerWidth < 768) {
-    paddingValue = "0px"
   }
   return (
     <ReactFullpage
@@ -34,25 +51,26 @@ const Main = () => {
       paddingTop = {paddingValue}
       touchSensitivity = "10"
       responsiveWidth = "768"
+      scrollBar = {false}
 
       render={({ state, fullpageApi }) => {
         return (
           <ReactFullpage.Wrapper>
-            <div className="section">
+            <MainDiv className="section">
                 {renderContent()}
-            </div>
-            <div className="section">
+            </MainDiv>
+            <Div className="section">
                 <Main002 />
-            </div>
-            <div className="section">
+            </Div>
+            <Div className="section" color="bg">
                 <Main003 />
-            </div>
-            <div className="section">
+            </Div>
+            <Div className="section">
                 <Main004 />
-            </div>
-            <div className="section">
+            </Div>
+            <Div className="section" color="bg">
                 <Main005 />
-            </div>                        
+            </Div>                        
           </ReactFullpage.Wrapper>
         );
       }}

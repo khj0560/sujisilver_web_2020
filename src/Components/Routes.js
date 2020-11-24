@@ -1,6 +1,5 @@
 
 import React from "react";
-import PropTypes from "prop-types";
 import { Route, Switch, Redirect } from "react-router-dom";
 import Main from "../Routes/Main";
 import Intro from "../Routes/Intro";

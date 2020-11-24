@@ -7,21 +7,6 @@ import Icon from "../Icon";
 import main003Icon01 from "../../images/main/main003_icon_01.png";
 import main003Icon02 from "../../images/main/main003_icon_02.png";
 
-const MainBox = styled.div`
-    background-color: ${(props) => props.color ? props.theme.bgColor : props.theme.whiteColor};
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    & {
-        padding: 50px 30px;
-
-        @media(max-width: 768px) {
-            padding: 50px 20px;
-        }
-    }
-`
 const FlexBox = styled.div`
     display: flex;
     justify-content: center;
@@ -77,31 +62,31 @@ const Main003Text = styled(Text)`
 
 const Main003 = () => {
     return(
-        <MainBox color="bg">
-                <Title 
-                    title1={{title: "24시간 간병은 ", color:"black"}}
-                    title2={{title: "수지 실버 요양원", color:"red"}}
-                    subTitle={["노인성 질환으로 거동이나 일상생활 도움이 필요하신 어르신께",
-                    "24시간 간병과 케어를 해드립니다"]}
-                />
-                <FlexBox direction="column">
-                    <ItemBox>
-                        <Main003Icon image={main003Icon01}/>
-                        <Main003Text
-                            title = "매일 행복한 치유 프로그램"
-                            text = {["매일 다양한 프로그램 제공을 통해 적절한 자극과 훈련으로 남아있는 인지 기능을 최대한 유지 합니다."]}
-                        />
-                    </ItemBox>    
-                    <ItemBox>
-                        <Main003Icon image={main003Icon02}/>
-                        <Main003Text 
-                            title = "촉탁의, 방문간호 시행 중"
-                            text = {["2주에 한 번 의사가 방문하여 어르신들의  건강 상태를 꼼꼼히 체크합니다. 또한 필요시 간호사 선생님이 수시로 방문합니다."]}
-                        />
-                    </ItemBox>  
-                </FlexBox>
-                <Button text="요양원 상담 문의" />
-        </MainBox>
+        <>
+            <Title 
+                title1={{title: "24시간 간병은 ", color:"black"}}
+                title2={{title: "수지 실버 요양원", color:"red"}}
+                subTitle={["노인성 질환으로 거동이나 일상생활 도움이 필요하신 어르신께",
+                "24시간 간병과 케어를 해드립니다"]}
+            />
+            <FlexBox direction="column">
+                <ItemBox>
+                    <Main003Icon image={main003Icon01}/>
+                    <Main003Text
+                        title = "매일 행복한 치유 프로그램"
+                        text = {["매일 다양한 프로그램 제공을 통해 적절한 자극과 훈련으로 남아있는 인지 기능을 최대한 유지 합니다."]}
+                    />
+                </ItemBox>    
+                <ItemBox>
+                    <Main003Icon image={main003Icon02}/>
+                    <Main003Text 
+                        title = "촉탁의, 방문간호 시행 중"
+                        text = {["2주에 한 번 의사가 방문하여 어르신들의  건강 상태를 꼼꼼히 체크합니다. 또한 필요시 간호사 선생님이 수시로 방문합니다."]}
+                    />
+                </ItemBox>  
+            </FlexBox>
+            <Button text="요양원 상담 문의" />
+        </>        
     ) 
 }
 

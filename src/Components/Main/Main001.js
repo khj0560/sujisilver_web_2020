@@ -5,6 +5,7 @@ import arrow_bottom from "../../images/main/arrow_bottom.png";
 import main001Btn01 from "../../images/main/main001_btn_01.png";
 import main001Btn02 from "../../images/main/main001_btn_02.png";
 import main001Btn03 from "../../images/main/main001_btn_03.png";
+import {Link} from "react-router-dom";
 
 const Main001Box = styled.div`
     background: url(${mainImg});
@@ -84,7 +85,6 @@ const MainBtn = styled.div`
     position: relative;
     width: 22%;
     border-radius: 10px;
-
     & div:first-child {
         position: absolute;
         width: 100%;
@@ -115,6 +115,7 @@ const MainBtn = styled.div`
         background-color: ${props => props.theme.pointColor};
         padding: 20px 0;
         border-radius: 0 0 10px 10px;
+        margin: 0;
     }
 
 `
@@ -130,17 +131,20 @@ const BtnImg = styled.div`
     background-position: center center;
 `
 
-const MainBtnComp = ({title,image}) => (
+const MainBtnComp = ({link,title,image}) => (
     <MainBtn>
+        <Link to={link}>
         <div>
         <h3>{title}</h3>
         </div>
         <BtnImg image={image}/>
         <button><h4>센터 소개 바로가기</h4></button>
+        </Link>
     </MainBtn>
 )
 
 const Main001 = () => {
+
     return (                
         <Main001Box>
             <MainTitleArea>
@@ -151,14 +155,17 @@ const Main001 = () => {
                 <MainBtnComp 
                     title="주야간보호센터"
                     image={main001Btn01}
+                    link="/daynightcare"
                 />
                 <MainBtnComp 
                     title="요양원"
                     image={main001Btn02}
+                    link="/nursinghome"
                 />
                 <MainBtnComp 
                     title="방문요양"
                     image={main001Btn03}
+                    link="/visitcare"
                 />
             </MainBtnArea>   
             <ArrowBottom><a href="#"></a></ArrowBottom>

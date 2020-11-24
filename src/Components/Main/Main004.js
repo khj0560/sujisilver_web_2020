@@ -9,22 +9,6 @@ import main004Icon02 from "../../images/main/main004_icon_02.png";
 import main004Icon03 from "../../images/main/main004_icon_03.png";
 import main004Icon04 from "../../images/main/main004_icon_04.png";
 
-const MainBox = styled.div`
-    background-color: ${(props) => props.color ? props.theme.bgColor : props.theme.whiteColor};
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-
-    & {
-        padding: 50px 30px;
-
-        @media(max-width: 768px) {
-            padding: 50px 20px;
-        }
-    }
-`
 const Main004Title = styled(Title)`
     & div {
         @media(max-width: 900px) {
@@ -78,7 +62,7 @@ const Main004Text = styled(Text)`
 
 const Main004 = () => {
     return(
-        <MainBox>
+        <>
             <Main004Title 
                 title1={{title: "일상 생활 도움은 "}}
                 title2={{title: "수지 실버 방문요양센터", color: "red"}}
@@ -118,7 +102,7 @@ const Main004 = () => {
                 </Wrapper>
             </div>
             <Button text="방문요양 상담 문의" />
-        </MainBox>  
+        </>  
     )
 }
 

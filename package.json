@@ -9,9 +9,10 @@
     "react-device-detect": "^1.14.0",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3",
+    "react-scripts": "^4.0.1",
     "styled-components": "^5.2.0",
-    "styled-reset": "^4.2.3"
+    "styled-reset": "^4.2.3",
+    "swiper": "^6.3.5"
   },
   "scripts": {
     "start": "react-scripts start",

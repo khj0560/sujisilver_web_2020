@@ -18,7 +18,7 @@ const HeaderWrapper = styled.header`
     z-index: 10;
     display: flex;
     justify-content: center;
-    
+    box-shadow: 0 0 0 #333, 0 1px 5px rgba(0,0,0,0.05);
     @media (max-width: 1240px) {
         min-width: 250px;
     }

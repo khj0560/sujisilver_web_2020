@@ -81,6 +81,7 @@ export default createGlobalStyle`
 
         a {color:#555;}
         a:link, a:visited {text-decoration:none}        
+        textarea:focus { outline: none; } button:focus { outline: none; } input:focus { outline: none; }
 
         body {
             margin: 0;
@@ -92,6 +93,9 @@ export default createGlobalStyle`
             line-height:35px;
             background-color: #fff;
             height: 100%;
+            @media(max-width: 768px) {
+                font-size: 16px;
+            }
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -101,40 +105,25 @@ export default createGlobalStyle`
         }
 
         h1 {
-            font-size: 40px;
+            font-size: 2.2rem;
             line-height: 48px;
-            @media(max-width: 900px) {
-                font-size: 30px;
-            }
         }
         h2 {
-            font-size: 36px;
+            font-size: 2rem;
             line-height: 48px;
-            @media(max-width: 900px) {
-                font-size: 28px;
-            }
         }
         h3 {
-            font-size: 30px;
-            @media(max-width: 900px) {
-                font-size: 22px;
-            }
+            font-size: 1.6rem;
         }
         h4 {
-            font-size: 22px;
+            font-size: 1.2rem;
             line-height: 38px;
-            @media(max-width: 900px) {
-                font-size: 20px;
-            }
         }
         h5 {
-            font-size: 20px;
-            @media(max-width: 900px) {
-                font-size: 20px;
-            }
+            font-size: 1.1rem;
         }
         p {
-            font-size: 18px;
+            font-size: 1rem;
             word-break: keep-all;
         }
 

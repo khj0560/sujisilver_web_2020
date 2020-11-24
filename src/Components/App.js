@@ -9,8 +9,18 @@ import {BrowserRouter as Router, Route} from "react-router-dom";
 import Routes from "./Routes";
 
 const Contents = styled.div`
-    min-width: 250px;
+    width: 1240px;
+    margin: 0 auto;
     margin-top: ${props => props.paddingVal};
+
+  @media (max-width: 1440px) {
+    width: 1024px;
+    padding: 0 30px;
+  }
+  @media (max-width: 1024px) {
+    width: 100%;
+    padding: 0 20px;
+  }
  ` 
 
 export default() => {
@@ -25,6 +35,7 @@ export default() => {
         <Router>
           <Header/>
           <Route exact={true} path="/" component={Main}/>
+          <Route exact={true} path="/sujisilver_web_2020" component={Main}/>
           <Contents paddingVal={paddingValue} >
             <Routes />
           </Contents>  
