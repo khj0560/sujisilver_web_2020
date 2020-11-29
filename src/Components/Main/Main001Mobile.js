@@ -30,7 +30,7 @@ const BtnArea = styled.div`
     position: relative;
     overflow: hidden;
     width: 100%;
-    margin-top: 30px;
+    margin: 20px 0 50px 0;
     padding: 0;
     transition-duration:.1s;
     text-align: center;

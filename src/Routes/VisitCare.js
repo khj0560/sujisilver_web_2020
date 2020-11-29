@@ -1,23 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import Tab from "../Hooks/Tab";
-import { TopTitle, Div, TitleDiv, TableDiv, SmallP } from "../Components/Contents/ContentsShareSt";
+import ContentTitle from "../Components/Contents/ContentTitle";
+import { TopTitle, Div, Space, TitleDiv, TableDiv, SmallP } from "../Components/Contents/ContentsShareSt";
+import Slide from "../Components/Contents/Slide";
 
-const Title = styled.div`
-    ${TopTitle}
-`
-const ThirdWrapper = styled.div`
-    ${Div}
-`
-const NumberIcon = styled.div`
-    ${TitleDiv}
-`
-const SmallText = styled.p`
-    ${SmallP}
-`
-const TableArea = styled.div`
-    ${TableDiv}
-`
+const Title = styled.div`${TopTitle}`
+const TextArea = styled.div`${Space}`
+const TextWrapper = styled.div`${Div}`
+const NumberIcon = styled.div`${TitleDiv}`
+const TableArea = styled.div`${TableDiv}`
 const SmallWidthTable = styled(TableArea)`
     width: 60%;
     margin: 0 auto;
@@ -28,42 +20,92 @@ const SmallWidthTable = styled(TableArea)`
 const TD = styled.td`
     color: ${props => props.theme.pointColor};
 `
+const First = () => (
+    <>
+        <ContentTitle text="하루 중 일정 시간동안 어르신을 센터에서 보호하며, 어르신께서 센터에 계시는 동안 다양한 서비스를 받으실 수 있도록 안내드리고 있습니다."/>
+        <TextArea>
+            <TextWrapper flex={true} padding={true} textColor={true}>
+                <NumberIcon pointColor={true}><h5>01</h5></NumberIcon>
+                <h5>신체활동 지원 서비스</h5>
+            </TextWrapper>    
+            <TextWrapper width="700px">
+                <p>재활운동보조, 목욕, 병원 동행, 식사도움, 산책, 운동 동행 등 신체활동 지원 서비스를 제공합니다.</p>
+            </TextWrapper>     
+            
+        </TextArea>
+        <TextArea>
+            <TextWrapper flex={true} padding={true} textColor={true}>
+                <NumberIcon pointColor={true}><h5>02</h5></NumberIcon>
+                <h5>일상생활 지원 서비스</h5>
+            </TextWrapper>    
+            <TextWrapper width="700px">
+                <p>식사준비, 취사도움, 청소 및 세탁 등 일상생활 지원 서비스를 제공합니다.</p>
+            </TextWrapper> 
+            
+        </TextArea>     
+        <TextArea>
+            <TextWrapper flex={true} padding={true} textColor={true}>
+                <NumberIcon pointColor={true}><h5>03</h5></NumberIcon>
+                <h5>개인활동 지원 서비스</h5>
+            </TextWrapper>    
+            <TextWrapper width="700px">
+                <p>외출시 동행, 장보기, 약 타오기 등 개인활동 지원 서비스를 제공합니다.</p>
+            </TextWrapper> 
+            
+        </TextArea>
+        <TextArea>
+            <TextWrapper flex={true} padding={true} textColor={true}>
+                <NumberIcon pointColor={true}><h5>04</h5></NumberIcon>
+                <h5>정서 지원 서비스</h5>
+            </TextWrapper>    
+            <TextWrapper width="700px">
+                <p>말벗, 격려 및 위로, 생활 상담 등 정서 지원 서비스를 제공합니다.</p>
+            </TextWrapper> 
+            
+        </TextArea>
+    </>
+)
 const Second =() => {
     return (
         <>
-            <ThirdWrapper flex={true} padding={true}>
+        <TextArea>
+            <TextWrapper flex={true} padding={true}>
                 <NumberIcon><h5>01</h5></NumberIcon>
                 <h5>이용대상</h5>
-            </ThirdWrapper>
-            <ThirdWrapper>
+            </TextWrapper>
+            <TextWrapper>
                 <p>
                 1. 장기요양등급을 받은 인지지원등급 어르신
                 </p>
-            </ThirdWrapper>
-            <ThirdWrapper textColor={true}>
+            </TextWrapper>
+            <TextWrapper textColor={true}>
                 <p>
                     <br />
                     수지 실버 주야간보호센터에서는 노인장기요양등급 신청 과정을 도와드리고 있습니다.<br />
                     전화로 문의주시면 친절하게 안내해 드리겠습니다.
                 </p>
-            </ThirdWrapper>
-            <ThirdWrapper flex={true} padding={true}>
+            </TextWrapper>
+        </TextArea>
+        <TextArea>
+            <TextWrapper flex={true} padding={true}>
                 <NumberIcon><h5>02</h5></NumberIcon>
                 <h5>입소절차 / 구비서류 / 준비물</h5>
-            </ThirdWrapper>
-            <ThirdWrapper>
+            </TextWrapper>
+            <TextWrapper>
                 <p>
                     1. 장기요양인정서<br />
                     2. 표준장기요양이용계획서<br />
                 </p>
-            </ThirdWrapper>
-            <ThirdWrapper flex={true} padding={true}>
+            </TextWrapper>
+        </TextArea>
+        <TextArea>
+            <TextWrapper flex={true} padding={true}>
                 <NumberIcon><h5>03</h5></NumberIcon>
                 <h5>비용안내</h5>
-            </ThirdWrapper>
-            <ThirdWrapper>
+            </TextWrapper>
+            <TextWrapper>
                 <p>방문요양 월 한도액</p>
-            </ThirdWrapper>
+            </TextWrapper>
             <SmallWidthTable>
                 <table>
                     <thead>
@@ -100,9 +142,9 @@ const Second =() => {
                     </tbody>
                 </table>
             </SmallWidthTable>
-            <ThirdWrapper>
+            <TextWrapper>
                 <p>방문요양 1회당 이용요금 및 본인부담금</p>
-            </ThirdWrapper>
+            </TextWrapper>
             <TableArea>
                 <table>
                     <thead>
@@ -228,12 +270,13 @@ const Second =() => {
                     </tbody>
                 </table>
             </TableArea>            
-            <ThirdWrapper textColor={true}>
+            <TextWrapper textColor={true}>
                 <p>
                     다양한 요인으로 비용이 달라질 수 있습니다.<br />
                     정확한 비용은 센터로 문의주시면 친절하게 안내해 드리겠습니다.
                 </p>
-            </ThirdWrapper>
+            </TextWrapper>
+        </TextArea>
         </>
     )
 }
@@ -241,7 +284,7 @@ const TabContents = () => {
     const content = [
         {
             tab: "서비스안내",
-            content: "none"
+            content: <First />
         },
         {
             tab: "비용안내",

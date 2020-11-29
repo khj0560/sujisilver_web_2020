@@ -1,47 +1,63 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
+import SwiperCore, { Navigation, Thumbs } from 'swiper';
 import {Swiper, SwiperSlide} from "swiper/react";
-import "swiper/swiper.scss"
-import "swiper/components/thumbs/thumbs.scss"
+import "swiper/swiper-bundle.css";
+import "../../Styles/Slide.css";
 
-// const SwiperWrapper = styled.div`
-//     width: 100%;
-//     height: 300px;
-// `
-// const SwiperSlide = styled.div`
-//     background-size: cover;
-//     background-position: center;
-// `
-// const GalleryTop = styled.div`
-//     height: 80%;
-//     width: 100%;
-// `
-// const GalleryThumbs = styled.div`
-//     height: 20%;
-//     box-sizing: border-box;
-//     padding: 10px 0;
+const SlideWrapper = styled.div`
+  margin: 20px 0;
+`
+SwiperCore.use([Navigation, Thumbs]);
+const Slide = ({images}) => {
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  return (
+    <React.Fragment>
+      <SlideWrapper id="subPageSlide">
+        <Swiper
+          id="main"
+          thumbs={{ swiper: thumbsSwiper }}
+          tag="section"
+          wrapperTag="ul"
+          navigation
+          spaceBetween={0}
+          slidesPerView={1}
+          loop={true}
+        >
+          {images.map((image,index)=>(
+            <SwiperSlide key={`slide-${index}`} tag="li">
+              <img
+                src={image} 
+                style={{ listStyle: 'none' }}
+                alt={`Slide ${index}`}>
+              </img>
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-//     & > div {
-//         height: 100%;
-//         opacity: 0.4;
-//     }
-// `
-// const ThumbActive = styled.div`
-//     opacity: 1;
-// `
-
-const slide = () => (
-    <Swiper
-        spaceBetween = {10}
-        slidesPerView = {4}
-        loop = {true}
-        freeMode = {true}
-        loopedSlides = {5}
-        watchSlidesVisibility = {true}
-        watchSlidesProgress = {true}
-    >
-
-    </Swiper>
-)
-
-export default slide;
+        <Swiper
+          id="thumbs"
+          spaceBetween={5}
+          slidesPerView={6}
+          watchSlidesVisibility={true}
+          watchSlidesProgress={true}
+          onSwiper={setThumbsSwiper}
+        >
+          {images.map((image,index)=>(
+            <SwiperSlide key={`slide-${index}`} tag="li" style={{ listStyle: 'none' }}>
+              <img
+                src={image} 
+                alt={`Thumbnail ${index}`}>
+              </img>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </SlideWrapper>
+    </React.Fragment>
+    )
+}
+Slide.propTypes= {
+  images: PropTypes.array.isRequired
+}
+export default Slide;

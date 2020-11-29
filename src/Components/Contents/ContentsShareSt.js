@@ -1,5 +1,4 @@
-import React from "react";
-import { styled, css } from "styled-components";
+import { css } from "styled-components";
 
 export const TopTitle = css`
     padding: 100px 0 50px 0;
@@ -15,11 +14,11 @@ export const TopTitle = css`
         padding: 50px 0 20px 0;
     }
 `
-
 export const Div = css`
-    width: 100%;
+    width: ${props => props.width ? props.width : "100%" };
     text-align: center;
-    padding : ${props => props.padding ? "50px 0 30px 0" : "0"};
+    margin: 0 auto;
+    padding : ${props => props.padding ? "15px 0 15px 0" : "0"};
     color : ${props => props.textColor ? props.theme.pointColor : props.theme.darkGrayColor};
     ${props => {
         if(props.flex){
@@ -28,13 +27,23 @@ export const Div = css`
                 justify-content: center;`
             )}
     }}
+    & h5 {
+        font-family: "TB" !important;
+    }
+    @media(max-width: 768px) {
+        width: 100%;
+    }
+`
+export const Space = css`
+    margin: 0 0 50px 0;
 `
 export const TitleDiv = css`
-    width: 45px;
-    height: 40px;
-    background-color: ${props => props.theme.darkGrayColor};
+    width: 40px;
+    height: 35px;
+    background-color: ${props => props.pointColor ? props.theme.pointColor : props.theme.darkGrayColor};
     color: ${props => props.theme.whiteColor};
     margin: 0 15px;
+    font-family: "TB" !important;
 `
 export const TableDiv = css`
     width: 100%;

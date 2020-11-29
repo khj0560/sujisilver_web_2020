@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Main from "../Routes/Main";
 import Header from "./Header/Header";
 import styled, { ThemeProvider } from 'styled-components';
@@ -24,10 +24,7 @@ const Contents = styled.div`
  ` 
 
 export default() => {
-  let paddingValue = "70px"
-  if (isMobile || window.innerWidth < 1024) {
-    paddingValue = "113px"
-  }
+  const [paddingValue, setPaddingValue] = useState(window.innerWidth < 1024 ? "113px" : "70px")
   return (
     <ThemeProvider theme={Theme}>
       <>

@@ -3,30 +3,94 @@ import styled from "styled-components";
 import Tab from "../Hooks/Tab";
 import ContentTitle from "../Components/Contents/ContentTitle";
 import Schedule from "../Components/Contents/Schedule";
-import { TopTitle, Div, TitleDiv, TableDiv, SmallP } from "../Components/Contents/ContentsShareSt";
+import { TopTitle, Div, Space, TitleDiv, TableDiv, SmallP } from "../Components/Contents/ContentsShareSt";
+import Slide from "../Components/Contents/Slide";
 
-const Title = styled.div`
-    ${TopTitle}
-`
-const ThirdWrapper = styled.div`
-    ${Div}
-`
-const NumberIcon = styled.div`
-    ${TitleDiv}
-`
-const SmallText = styled.p`
-    ${SmallP}
-`
-const TableArea = styled.div`
-    ${TableDiv}
-`
-const TD = styled.td`
-    color: ${props => props.theme.pointColor};
-`
+import DayNight0101 from "../images/slide/dayNight/dayNight_01_01.JPG";
+import DayNight0102 from "../images/slide/dayNight/dayNight_01_02.JPG";
+import DayNight0103 from "../images/slide/dayNight/dayNight_01_03.JPG";
+import DayNight0104 from "../images/slide/dayNight/dayNight_01_04.JPG";
+import DayNight0105 from "../images/slide/dayNight/dayNight_01_05.JPG";
+import DayNight0106 from "../images/slide/dayNight/dayNight_01_06.JPG";
+import DayNight0107 from "../images/slide/dayNight/dayNight_01_07.JPG";
+import DayNight0108 from "../images/slide/dayNight/dayNight_01_08.JPG";
+
+import DayNight0201 from "../images/slide/dayNight/dayNight_02_01.JPG";
+import DayNight0202 from "../images/slide/dayNight/dayNight_02_02.JPG";
+import DayNight0203 from "../images/slide/dayNight/dayNight_02_03.JPG";
+import DayNight0204 from "../images/slide/dayNight/dayNight_02_04.JPG";
+import DayNight0205 from "../images/slide/dayNight/dayNight_02_05.JPG";
+import DayNight0206 from "../images/slide/dayNight/dayNight_02_06.JPG";
+import DayNight0207 from "../images/slide/dayNight/dayNight_02_07.JPG";
+import DayNight0208 from "../images/slide/dayNight/dayNight_02_08.JPG";
+
+import DayNight0301 from "../images/slide/dayNight/dayNight_03_01.JPG";
+import DayNight0302 from "../images/slide/dayNight/dayNight_03_02.JPG";
+import DayNight0303 from "../images/slide/dayNight/dayNight_03_03.JPG";
+import DayNight0304 from "../images/slide/dayNight/dayNight_03_04.JPG";
+import DayNight0305 from "../images/slide/dayNight/dayNight_03_05.JPG";
+import DayNight0306 from "../images/slide/dayNight/dayNight_03_06.JPG";
+import DayNight0307 from "../images/slide/dayNight/dayNight_03_07.JPG";
+
+const Title = styled.div`${TopTitle}`
+const TextArea = styled.div`${Space}`
+const TextWrapper = styled.div`${Div}`
+const NumberIcon = styled.div`${TitleDiv}`
+const SmallText = styled.p`${SmallP}`
+const TableArea = styled.div`${TableDiv}`
+const TD = styled.td`color: ${props => props.theme.pointColor};`
 // ====================== style end ======================= //
-const First = () => (
-    <ContentTitle text="하루 중 일정 시간동안 어르신을 센터에서 보호하며, 어르신께서 센터에 계시는 동안 다양한 서비스를 받으실 수 있도록 안내드리고 있습니다."/>
-)
+const First = () => {
+    const firstImages = [DayNight0101,DayNight0102,DayNight0103,DayNight0104,DayNight0105,DayNight0106,DayNight0107,DayNight0108];
+    const secondImages = [DayNight0201,DayNight0202,DayNight0203,DayNight0204,DayNight0205,DayNight0206,DayNight0207,DayNight0208];
+    const thirdImages = [DayNight0301,DayNight0302,DayNight0303,DayNight0304,DayNight0305,DayNight0306,DayNight0307];
+    const forthImages = [DayNight0101,DayNight0102,DayNight0103,DayNight0104,DayNight0105];
+    return (
+        <>
+            <ContentTitle text="하루 중 일정 시간동안 어르신을 센터에서 보호하며, 어르신께서 센터에 계시는 동안 다양한 서비스를 받으실 수 있도록 안내드리고 있습니다."/>
+            <TextArea>
+                <TextWrapper flex={true} padding={true} textColor={true}>
+                    <NumberIcon pointColor={true}><h5>01</h5></NumberIcon>
+                    <h5>다양한 인지 강화 프로그램</h5>
+                </TextWrapper>    
+                <TextWrapper width="700px">
+                    <p>하루에 세 번 다양한 프로그램이 운영되고 있습니다. 오전 체조 프로그램으로 건강을 유지하고, 오후에는 인지 / 체험 활동 위주의 프로그램으로 어르신들의 인지 기능 강화에 힘쓰고 있습니다.</p>
+                </TextWrapper>     
+                <Slide images={firstImages}/>
+            </TextArea>
+            <TextArea>
+                <TextWrapper flex={true} padding={true} textColor={true}>
+                    <NumberIcon pointColor={true}><h5>02</h5></NumberIcon>
+                    <h5>활기차고 즐거운 일상 이벤트</h5>
+                </TextWrapper>    
+                <TextWrapper width="700px">
+                    <p>어르신 생신잔치, 명절 체험 프로그램, 매달 시행되는 시장놀이 등 일상 내 다양한 이벤트로 일상을 더욱 즐겁게 보내실 수 있도록 매달 다양한 이벤트를 준비하고 있습니다.</p>
+                </TextWrapper> 
+                <Slide images={secondImages} />
+            </TextArea>     
+            <TextArea>
+                <TextWrapper flex={true} padding={true} textColor={true}>
+                    <NumberIcon pointColor={true}><h5>03</h5></NumberIcon>
+                    <h5>물리치료 및 재활 도움 서비스</h5>
+                </TextWrapper>    
+                <TextWrapper width="700px">
+                    <p>공기압 마사지기, 전신 마사지기, 족욕기, 반신욕기, 워커 등 물리치료 기기와 재활 기구를 갖춘 물리치료실을 보유하고 있습니다.</p>
+                </TextWrapper> 
+                <Slide images={thirdImages} />
+            </TextArea>
+            <TextArea>
+                <TextWrapper flex={true} padding={true} textColor={true}>
+                    <NumberIcon pointColor={true}><h5>04</h5></NumberIcon>
+                    <h5>매일 건강 체크 및 일상 방역</h5>
+                </TextWrapper>    
+                <TextWrapper width="700px">
+                    <p>센터 내 간호 선생님이 근무하여 매일 어르신들의 상태 체크를 진행합니다. 또한 각종 감염병 예방을 위한 일상 방역을 시행하고 있습니다.</p>
+                </TextWrapper> 
+                {/* <Slide />  */}
+            </TextArea>
+        </>
+    )
+}
 const Second = () => {
     const times =["8:30 am","9:00 am","9:30 am","10:00 am","10:30 am","11:00 am","11:30 am","12:00 pm","12:30 pm","1:00 pm","1:30 pm","2:00 pm","2:30 pm","3:00 pm","3:30 pm","4:00 pm","4:30 pm","5:00 pm","5:30 pm","6:00 pm","6:30 pm"]
     const height = {
@@ -128,28 +192,31 @@ const Second = () => {
 const Third =() => {
     return (
         <>
-            <ThirdWrapper flex={true} padding={true}>
+        <TextArea>
+            <TextWrapper flex={true} padding={true}>
                 <NumberIcon><h5>01</h5></NumberIcon>
                 <h5>이용대상</h5>
-            </ThirdWrapper>
-            <ThirdWrapper>
+            </TextWrapper>
+            <TextWrapper>
                 <p>
                     1. 장기요양등급을 받은 인지지원등급 어르신<br />
                     2. 60세 이상 심신허약 및 뇌졸중, 경증치매 어르신으로 낮 동안 보호가 필요한 어르신
                 </p>
-            </ThirdWrapper>
-            <ThirdWrapper textColor={true}>
+            </TextWrapper>
+            <TextWrapper textColor={true}>
                 <p>
                     <br />
                     수지 실버 주야간보호센터에서는 노인장기요양등급 신청 과정을 도와드리고 있습니다.<br />
                     전화로 문의주시면 친절하게 안내해 드리겠습니다.
                 </p>
-            </ThirdWrapper>
-            <ThirdWrapper flex={true} padding={true}>
+            </TextWrapper>
+        </TextArea>    
+        <TextArea>
+            <TextWrapper flex={true} padding={true}>
                 <NumberIcon><h5>02</h5></NumberIcon>
                 <h5>입소절차 / 구비서류</h5>
-            </ThirdWrapper>
-            <ThirdWrapper>
+            </TextWrapper>
+            <TextWrapper>
                 <p>
                     1. 장기요양인정서<br />
                     2. 표준장기요양이용계획서<br />
@@ -157,15 +224,17 @@ const Third =() => {
                     4. 국민기초생활보장법 수급자 증명서<br />
                     5. 복지용구 이용시 복지용구 급여확인서<br />
                 </p>
-            </ThirdWrapper>
-            <ThirdWrapper flex={true} padding={true}>
+            </TextWrapper>
+        </TextArea>    
+        <TextArea>
+            <TextWrapper flex={true} padding={true}>
                 <NumberIcon><h5>03</h5></NumberIcon>
                 <h5>비용안내</h5>
-            </ThirdWrapper>
-            <ThirdWrapper>
+            </TextWrapper>
+            <TextWrapper>
                 <p>주야간보호센터 시간별 급여비용</p>
                 <SmallText>건강보험공단 2020년 1월 기준</SmallText>
-            </ThirdWrapper>
+            </TextWrapper>
             <TableArea>
                 <table>
                     <thead>
@@ -228,10 +297,10 @@ const Third =() => {
                     </tbody>    
                 </table>
             </TableArea>
-            <ThirdWrapper>
+            <TextWrapper>
                 <p>수지실버주야간보호센터 이용금액</p>
                 <SmallText>월요일 ~ 금요일 일 8시간 기준</SmallText>
-            </ThirdWrapper>
+            </TextWrapper>
             <TableArea>
                 <table>
                     <thead>
@@ -365,12 +434,13 @@ const Third =() => {
                     </tbody>
                 </table>
             </TableArea>
-            <ThirdWrapper textColor={true}>
+            <TextWrapper textColor={true}>
                 <p>
                     다양한 요인으로 비용이 달라질 수 있습니다.<br />
                     정확한 비용은 센터로 문의주시면 친절하게 안내해 드리겠습니다.
                 </p>
-            </ThirdWrapper>
+            </TextWrapper>
+        </TextArea>    
         </>
     )
 }

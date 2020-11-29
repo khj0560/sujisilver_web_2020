@@ -11,13 +11,13 @@ const ButtonWrapper = styled.div`
     & button {
         background: none;
         border: 2px solid ${props => props.theme.pointColor};
-        border-radius: 60px;
+        border-radius: 50px;
         color: ${props => props.theme.pointColor};
         display: block;
         font-family: 'notoB';
         margin: 50px auto;
-        width: 450px;
-        padding: 30px 50px;
+        width: 400px;
+        padding: 25px 50px;
         position: relative;
 
         @media(max-width: 768px) {
