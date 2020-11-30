@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Title from "../Title";
 import Text from "../Text";
-import Button from "../Button";
+import Button from "./Button";
 import Icon from "../Icon";
 import main004Icon01 from "../../images/main/main004_icon_01.png";
 import main004Icon02 from "../../images/main/main004_icon_02.png";
@@ -101,7 +101,7 @@ const Main004 = () => {
                     </Item>
                 </Wrapper>
             </div>
-            <Button text="방문요양 상담 문의" />
+            <Button to="/counsel" text="방문요양 상담 문의" />
         </>  
     )
 }

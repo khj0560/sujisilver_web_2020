@@ -18,14 +18,16 @@ const Div = styled.div`
   background-color: ${(props) => props.color ? props.theme.bgColor : props.theme.whiteColor};
   margin: 0 auto;
   padding: 0 30px;
-  @media (max-width: 768px) {
+`
+const MobileDiv = styled.div`
+  background-color: ${(props) => props.color ? props.theme.bgColor : props.theme.whiteColor};
+  margin: 0 auto;
+  height: 100% !important;
+  padding-top: 50px !important;
+  padding: 50px 20px;
+  
+  & > div{
     height: 100% !important;
-    padding-top: 50px !important;
-    padding: 50px 20px;
-    
-    & > div{
-      height: 100% !important;
-    }
   }
 `
 const Main = () => {
@@ -36,18 +38,18 @@ const Main = () => {
         <MainDiv>
           <MobileMain001/>
         </MainDiv>
-        <Div>
+        <MobileDiv>
           <Main002 />
-        </Div>
-        <Div color="bg">
+        </MobileDiv>
+        <MobileDiv color="bg">
           <Main003 />
-        </Div>
-        <Div>
+        </MobileDiv>
+        <MobileDiv>
           <Main004 />
-        </Div>
-        <Div color="bg">
+        </MobileDiv>
+        <MobileDiv color="bg">
           <Main005 />
-        </Div>
+        </MobileDiv>
       </>
     );
   }else {

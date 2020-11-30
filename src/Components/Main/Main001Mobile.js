@@ -4,6 +4,7 @@ import mainImg from "../../images/main/main_img.jpg";
 import main001Btn01 from "../../images/main/main001_btn_01.png";
 import main001Btn02 from "../../images/main/main001_btn_02.png";
 import main001Btn03 from "../../images/main/main001_btn_03.png";
+import {Link} from "react-router-dom";
 
 const MainBox = styled.div`
     /* padding-bottom: 50px; */
@@ -97,9 +98,9 @@ const Main001Mobile = () => (
         <BtnArea>
             <h5>주요서비스 안내</h5>
             <BtnList>
-                <BtnItems image={main001Btn01}><h5>주야간보호센터</h5></BtnItems>
-                <BtnItems image={main001Btn02}><h5>요양원</h5></BtnItems>
-                <BtnItems image={main001Btn03}><h5>방문요양센터</h5></BtnItems>
+                <Link to="/daynightcare"><BtnItems image={main001Btn01}><h5>주야간보호센터</h5></BtnItems></Link>
+                <Link to="/nursinghome"><BtnItems image={main001Btn02}><h5>요양원</h5></BtnItems></Link>
+                <Link to="/visitcare"><BtnItems image={main001Btn03}><h5>방문요양센터</h5></BtnItems></Link>
             </BtnList>
         </BtnArea>
     </MainBox>

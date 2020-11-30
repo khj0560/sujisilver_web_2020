@@ -42,7 +42,7 @@ const FoldIcon = styled.div`
     top: 8px;
     right: 20px;
 
-    @media (min-width: 650px) {
+    @media (min-width: 580px) {
         display: none;
     }   
 `

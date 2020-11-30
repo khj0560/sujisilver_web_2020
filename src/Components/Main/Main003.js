@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Title from "../Title";
 import Text from "../Text";
-import Button from "../Button";
+import Button from "./Button";
 import Icon from "../Icon";
 import main003Icon01 from "../../images/main/main003_icon_01.png";
 import main003Icon02 from "../../images/main/main003_icon_02.png";
@@ -85,7 +85,7 @@ const Main003 = () => {
                     />
                 </ItemBox>  
             </FlexBox>
-            <Button text="요양원 상담 문의" />
+            <Button to="/counsel" text="요양원 상담 문의" />
         </>        
     ) 
 }

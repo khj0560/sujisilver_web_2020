@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Title from "../Title";
-import Button from "../Button";
+import Button from "./Button";
 import SwiperCore, { Navigation, Pagination } from 'swiper';
 import {Swiper, SwiperSlide} from "swiper/react";
 import "swiper/swiper-bundle.css";
@@ -104,7 +104,7 @@ const Main002 = () => {
             "하루하루 건강하고 행복한 일상을 함께하세요"]}
         />
         <Slide></Slide>
-        <Button text="주야간보호센터 상담 문의" />
+        <Button to="/counsel" text="주야간보호센터 상담 문의" />
        </>
     )
 }
