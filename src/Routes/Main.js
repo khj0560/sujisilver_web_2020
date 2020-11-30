@@ -8,11 +8,9 @@ import Main003 from "../Components/Main/Main003";
 import Main004 from "../Components/Main/Main004";
 import Main005 from "../Components/Main/Main005";
 import MobileMain001 from "../Components/Main/Main001Mobile";
-import {isMobile} from "react-device-detect";
 
 const MainDiv = styled.div`
   padding-top: 113px;
-  height: 100%;
 `
 const Div = styled.div`
   background-color: ${(props) => props.color ? props.theme.bgColor : props.theme.whiteColor};
@@ -32,7 +30,7 @@ const MobileDiv = styled.div`
 `
 const Main = () => {
   const [paddingValue, setPaddingValue] = useState(window.innerWidth < 1024 ? "113px" : "70px")
-  if(isMobile || window.innerWidth < 768) {  
+  if(window.innerWidth < 768) {  
     return (
       <>
         <MainDiv>

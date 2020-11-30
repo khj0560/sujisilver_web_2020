@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
 import logo from "../../images/header/logo.png"
-import {isMobile} from "react-device-detect";
 import MobileHeader from "./MobileHeader";
 import { Link } from "react-router-dom";
 
@@ -93,8 +92,7 @@ function Header() {
 }
 
 const renderContent = () => {
-    const width = window.innerWidth;
-    if(isMobile || width < 1024) {
+    if(window.innerWidth < 1024) {
         return <MobileHeader />
     }else {
         return <Header />

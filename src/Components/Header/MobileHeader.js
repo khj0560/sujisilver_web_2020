@@ -40,7 +40,7 @@ const FoldIcon = styled.div`
     background: url(${mbFoldIcon}) no-repeat center;
     background-size: 80%;
     top: 8px;
-    right: 20px;
+    left: 20px;
 
     @media (min-width: 580px) {
         display: none;
@@ -112,7 +112,7 @@ function MobileHeader() {
         <MBHeader>
             <TopArea>
                 <Link to="/"><MBLogoArea></MBLogoArea></Link>
-                <FoldIcon></FoldIcon>
+                {/* <FoldIcon></FoldIcon> */}
             </TopArea>    
             <SubArea>
                 <MBList>

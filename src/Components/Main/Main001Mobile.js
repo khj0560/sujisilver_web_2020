@@ -7,8 +7,7 @@ import main001Btn03 from "../../images/main/main001_btn_03.png";
 import {Link} from "react-router-dom";
 
 const MainBox = styled.div`
-    /* padding-bottom: 50px; */
-    height: 100%;
+    background-color: ${props => props.theme.whiteColor};
 `
 const MainImg = styled.div`
     display: flex;
@@ -31,8 +30,7 @@ const BtnArea = styled.div`
     position: relative;
     overflow: hidden;
     width: 100%;
-    margin: 20px 0 50px 0;
-    padding: 0;
+    padding: 20px 0 50px 0;
     transition-duration:.1s;
     text-align: center;
 ` 

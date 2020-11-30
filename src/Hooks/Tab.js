@@ -100,7 +100,7 @@ const Tab = ({content}) =>{
         <>
         <BtnWrapper contentSize={content.length}>
             {content.map((section, index) => (
-                <Button key={index} onClick={()=> {changeItem(index)}} >
+                <Button key={index} onClick={() => {changeItem(index)}} >
                     <H5 active={index === currentIndex ? true : false}>{section.tab}</H5>
                 </Button>
             ))}
