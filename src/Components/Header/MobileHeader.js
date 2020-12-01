@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
 import mbLogo from "../../images/header/mobileLogo.png";
-import mbFoldIcon from "../../images/header/mobileFoldIcon.png";
 import arrowLeft from "../../images/header/arrowL.png";
 import arrowRight from "../../images/header/arrowR.png";
 import {Link} from "react-router-dom";
@@ -31,20 +30,6 @@ const MBLogoArea = styled.div`
     height: 100%;
     margin: 0 auto;
     float: center;
-`
-const FoldIcon = styled.div`
-    position: absolute;
-    display: block;
-    width: 28px;
-    height: 100%;
-    background: url(${mbFoldIcon}) no-repeat center;
-    background-size: 80%;
-    top: 8px;
-    left: 20px;
-
-    @media (min-width: 580px) {
-        display: none;
-    }   
 `
 const SubArea = styled.div`
     position: relative;
@@ -112,7 +97,6 @@ function MobileHeader() {
         <MBHeader>
             <TopArea>
                 <Link to="/"><MBLogoArea></MBLogoArea></Link>
-                {/* <FoldIcon></FoldIcon> */}
             </TopArea>    
             <SubArea>
                 <MBList>
