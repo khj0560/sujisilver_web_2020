@@ -29,6 +29,7 @@ export const Btn = css`
 `
 export const Slider = css`
     position: relative;
+    background-color: ${(props) => props.theme.bgColor};
     transition: transform .2s ease; 
 `
 const Wrapper = styled.div`

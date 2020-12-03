@@ -11,7 +11,6 @@ import MobileMain001 from "../Components/Main/Main001Mobile";
 
 const MainDiv = styled.div`
   padding-top: 113px;
-  background-color: ${(props) => props.theme.bgColor};
 `
 const Div = styled.div`
   background-color: ${(props) => props.color ? props.theme.bgColor : props.theme.whiteColor};
