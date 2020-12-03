@@ -11,6 +11,7 @@ import MobileMain001 from "../Components/Main/Main001Mobile";
 
 const MainDiv = styled.div`
   padding-top: 113px;
+  background-color: ${(props) => props.theme.bgColor};
 `
 const Div = styled.div`
   background-color: ${(props) => props.color ? props.theme.bgColor : props.theme.whiteColor};
@@ -35,19 +36,19 @@ const Main = () => {
       <>
         <MainDiv>
           <MobileMain001/>
+          <MobileDiv>
+            <Main002 />
+          </MobileDiv>
+          <MobileDiv color="bg">
+            <Main003 />
+          </MobileDiv>
+          <MobileDiv>
+            <Main004 />
+          </MobileDiv>
+          <MobileDiv color="bg">
+            <Main005 />
+          </MobileDiv>          
         </MainDiv>
-        <MobileDiv>
-          <Main002 />
-        </MobileDiv>
-        <MobileDiv color="bg">
-          <Main003 />
-        </MobileDiv>
-        <MobileDiv>
-          <Main004 />
-        </MobileDiv>
-        <MobileDiv color="bg">
-          <Main005 />
-        </MobileDiv>
       </>
     );
   }else {

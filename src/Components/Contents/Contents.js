@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
-import styled from 'styled-components';
-import {withRouter} from 'react-router-dom';
+import React, { useState } from "react";
+import styled from "styled-components";
+import {withRouter} from "react-router-dom";
 import Routes from "../Routes";
 
 const ContentDiv = styled.div`
