@@ -22,10 +22,11 @@ const TopArea = styled.div`
 `
 const MBLogoArea = styled.div`
     position: relative;
-    width: 130px;
+    width: 180px;
+    top: 9px;
     background: url(${mbLogo}) no-repeat 0 3px;
     background-position: center;
-    background-size: 85%;
+    background-size: 80%;
     max-width: 250px;
     height: 100%;
     margin: 0 auto;

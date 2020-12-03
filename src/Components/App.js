@@ -8,9 +8,9 @@ import Theme from "../Styles/Theme";
 import {BrowserRouter as Router, Route} from "react-router-dom";
 
 const Menu = styled.div`
+  display: none;
   background-color: ${props => props.theme.subPointColor};
   position: fixed;
-  display: flex;
   justify-content: center;
   padding-top: 30px;
   top: 0; bottom: 0; left: 0;
@@ -20,8 +20,8 @@ const Menu = styled.div`
     color: #fff;
   }
   ${props =>{
-      if(!props.displayOn) {
-        return `display: none`
+      if(!props.slideActive) {
+        return `display: flex`
     }
   }};
 `
