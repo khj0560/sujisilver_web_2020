@@ -58,7 +58,7 @@ const Slide = () => {
                             <SlideImg src={Image01} alt="Slide01" />
                             <SlideText>
                                 <h5>매일 다양한 프로그램</h5>
-                                <p>다양한 실버 인지 프로그램과 건강 체조로 일상을 보다 건강하게 유지하세요</p>
+                                <p>x다양한 실버 인지 프로그램과 건강 체조로 일상을 보다 건강하게 유지하세요</p>
                             </SlideText>
                         </Test>
                     </SwiperSlide>
