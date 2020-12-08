@@ -11,9 +11,11 @@ import {BrowserRouter as Router, Route} from "react-router-dom";
 const MobileMenu = styled(Menu)`
   ${props =>{
       if(!props.displayOn) {
-        return `display: none`
-    }
-  }};
+        return `display: none;
+          background-color: black;
+        `
+      }
+    }};
 `
 const Wrapper = styled.div`
   ${Slider}
@@ -22,12 +24,15 @@ const Wrapper = styled.div`
       return `transform: translateX(80%);`
     }
   }}
+  @media(max-width: 580px) {
+    background-color: ${(props) => props.theme.bgColor};
+  }
 `
 const Button = styled.button`
   ${Btn}
   ${props =>{
       if(!props.displayOn) {
-        return `display: none`
+        return `display: none;`
       }
     }};
 `
